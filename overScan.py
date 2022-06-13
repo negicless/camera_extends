@@ -85,7 +85,7 @@ class QANIM_OT_overscan_run(bpy.types.Operator):
         bpy.types.Camera.sensorWidth = bpy.props.IntProperty(name="sensor_width")
         camera.oriResX = curResX
         camera.oriResY = curResY
-        camera.sensorWidth = camera.sensor_width
+        camera.sensorWidth = int( camera.sensor_width)
 
         # センサーサイズ変更によるオーバースキャン
         sensorWidth = camera.sensor_width
